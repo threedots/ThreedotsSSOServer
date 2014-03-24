@@ -63,16 +63,16 @@ doctrine:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
 
-#mongo db connection
-doctrine_mongodb:
-    connections:
-        default:
-            server: mongodb://localhost:27017
-            options: {}
-    default_database: test_engine
-    document_managers:
-        default:
-            auto_mapping: true
+##mongo db connection
+#doctrine_mongodb:
+#    connections:
+#        default:
+#            server: mongodb://localhost:27017
+#            options: {}
+#    default_database: test_engine
+#    document_managers:
+#        default:
+#            auto_mapping: true
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -82,14 +82,14 @@ swiftmailer:
     password:  "%mailer_password%"
     spool:     { type: memory }
 
-#Be Simple SSO Auth
-be_simple_sso_auth:
-    admin_sso:
-        protocol:
-            id: cas
-            version: 2
-        server:
-            id: cas
-            login_url: http://www.testengine.local/login
-            logout_url: http://www.testengine.local/logout
-            validation_url: http://www.testengine.local/serviceValidate
+##Be Simple SSO Auth
+#be_simple_sso_auth:
+#    admin_sso:
+#        protocol:
+#            id: cas
+#            version: 2
+#        server:
+#            id: cas
+#            login_url: http://www.testengine.local/login
+#            logout_url: http://www.testengine.local/logout
+#            validation_url: http://www.testengine.local/serviceValidate
