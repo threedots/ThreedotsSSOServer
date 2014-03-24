@@ -8,34 +8,6 @@ use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
-
-//    public function indexAction()
-//    {
-//        $request = Request::createFromGlobals();
-//
-//        if( $request->isMethod('post')){
-//            $postData = $this->getRequest()->request->all();
-//            echo '<pre/>'; print_r( $postData);
-//            $loginData = $this->processLogin($postData);
-//
-//            if( !$loginData ){
-//                die('Sorry! invalid Authentication Information');
-//            }
-//
-//            echo '<pre/>'; print_r( $loginData);
-//            die;
-//        }
-//
-//
-//        return $this->render('TestEngineDashboardBundle:Default:index.html.twig', array('name' => 'Test Engine'));
-//    }
-//
-//    protected function processLogin($data)
-//    {
-//        $loginInfo = $this->get('auth_service')->checkLogin($data);
-//        return true;
-//    }
-
     public function indexAction()
     {
         $brokerService = $this->get('admin_broker');
