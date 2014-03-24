@@ -1,0 +1,12 @@
+threedots_sso:
+    resource: "@ThreedotsSsoBundle/Resources/config/routing.yml"
+    prefix:   /
+
+test_engine_core:
+    resource: "@TestEngineCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+test_engine_dashboard:
+    resource: "@TestEngineDashboardBundle/Resources/config/routing.yml"
+    prefix:   /
+

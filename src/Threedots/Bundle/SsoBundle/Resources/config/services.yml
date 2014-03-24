@@ -1,0 +1,27 @@
+parameters:
+     sso_model.class: Threedots\Bundle\SsoBundle\Model\Sso
+     sso_service.class: Threedots\Bundle\SsoBundle\Service\Sso
+     ssolinks_repository.class: Threedots\Bundle\SsoBundle\Entity\SsolinksRepository
+     users_repository.class: Threedots\Bundle\SsoBundle\Entity\UsersRepository
+
+services:
+     sso_model:
+        class: %sso_model.class%
+        arguments: [@service_container]
+
+     sso_service:
+        class: %sso_service.class%
+        arguments: [@service_container]
+
+     ssolinks_repository:
+        class: %ssolinks_repository.class%
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - 'ThreedotsSsoBundle:Ssolinks'
+     users_repository:
+        class: %users_repository.class%
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - 'ThreedotsSsoBundle:Users'

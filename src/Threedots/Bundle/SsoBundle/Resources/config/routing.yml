@@ -1,0 +1,3 @@
+threedots_sso_authenticate:
+    pattern:  /serviceAuth
+    defaults: { _controller: ThreedotsSsoBundle:Server:index }

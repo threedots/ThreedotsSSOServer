@@ -1,0 +1,284 @@
+.clearfix{ clear:both}
+
+hr {
+
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #fff;
+    margin: 20px -15px 10px -15px;
+}
+body{
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12px;
+    position: relative;
+    background-color: #e6e6e6;
+}
+
+
+body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom{
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+    font-family: arial, helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.navbar-brand{
+    padding: 10px 15px;
+}
+
+.navbar-default{
+    background: #fff;
+    box-shadow: 1px 1px 2px #aaa;
+}
+
+.navbar-default .navbar-nav > li > a{
+    color: #48A4E7;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+    background: #FFFFFF;
+    color: #48A4E7;
+    font-weight: bold;
+}
+
+.container{
+    max-width: 100% !important;
+    background: #E6E6E6;
+    margin: 50px 0 0;
+    position: relative;
+}
+
+.row{
+    width: 100%;
+    padding: 0;
+    margin: 10px 0 0;
+    position: static;
+    height: auto;
+}
+
+
+/*Navigation*/
+#nav-menu {
+    height: 45px;
+    background: url("../img/logo_header.png") no-repeat left center white;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #b3b3b3;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 9px 10px 11px 0;
+    -moz-box-shadow: 3px 3px 3px #ccc;
+    -webkit-box-shadow: 3px 3px 3px #ccc;
+    box-shadow: 3px 3px 3px #ccc;
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=135, Strength=3)
+}
+
+#nav-menu ul {
+    list-style: none outside none;
+    margin: 0;
+    vertical-align: middle;
+    position: relative;
+    z-index: 5
+}
+
+#nav-menu ul:first-child {
+    margin-left: 20px;
+    padding-left: 35px
+}
+
+#nav-menu li {
+    float: left;
+    margin-right: 0;
+    padding: 0 5px;
+    margin-right: 10px
+}
+
+#nav-menu li.first-li > a {
+    background: url("../img/drop_down.png") no-repeat scroll right top transparent;
+    padding-right: 15px;
+    display: block;
+    height: 25px
+}
+
+#nav-menu li.first-li:hover {
+    background: none repeat scroll 0 0 #fff
+}
+
+#nav-menu ul li.first-li:hover > a {
+    color: black !important;
+    background: url("../img/drop_down_selected.png") no-repeat scroll right top transparent
+}
+
+#nav-menu ul li {
+    position: relative
+}
+
+#nav-menu li a {
+    color: #45a8ee;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none
+}
+
+#nav-menu li:hover {
+    color: #000
+}
+
+#nav-menu ul li:hover ul, #nav-menu ul li a:hover ul {
+    display: block;
+    z-index: 5
+}
+
+#nav-menu ul li:hover ul li ul, #nav-menu ul li a:hover ul li a ul {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    overflow: hidden
+}
+
+#nav-menu ul li:hover ul li:hover ul, #nav-menu ul li a:hover ul li a:hover ul {
+    visibility: visible;
+    position: absolute;
+    top: -10px;
+    color: #000;
+    left: 167px;
+    height: auto;
+    border-top: 1px solid #c7c7c7
+}
+
+#nav-menu ul li.subsubl {
+    background-image: url(../images/right-drop-down.png);
+    background-repeat: no-repeat;
+    background-position: right center
+}
+
+#nav-menu ul li.subsubl:hover {
+    background-image: url(../images/right-drop-select.png)
+}
+
+#nav-menu li:hover .first-li {
+    color: #000 !important
+}
+
+#nav-menu ul li ul {
+    background-color: #fff;
+    display: none;
+    left: -1px;
+    line-height: 24px;
+    margin-top: -2px;
+    padding-bottom: 5px;
+    padding-left: 0;
+    padding-top: 5px;
+    position: absolute;
+    z-index: 999999 !important;
+    width: 170px;
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=127, Strength=3);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box
+}
+
+.dropdown-menu-arrow, .dropdown-menu-arrow-right {
+    height: 7px;
+    width: 12px;
+    display: block;
+    position: absolute;
+    top: -7px;
+    left: 20px;
+    background-image: url(../images/arrow-up.png)
+}
+
+.dropdown-menu-arrow-right {
+    right: 20px !important;
+    left: auto
+}
+
+.menu-drop-down-link {
+    font-size: 12px !important;
+    font-family: Arial, sans-serif;
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 18px;
+    color: #333;
+    white-space: nowrap;
+    margin-left: -10px;
+    margin-right: -10px
+}
+
+.menu-drop-down-link:hover {
+    text-decoration: none;
+    color: #fff !important;
+    background-color: #3ca4ed;
+    background-image: linear-gradient(to bottom, #45a8ee, #2e9dec);
+    background-repeat: repeat-x
+}
+
+#nav-menu li ul li {
+    width: 163px;
+    padding-left: 10px
+}
+
+#nav-menu li.current > a {
+    color: #000 !important
+}
+
+#nav-menu li ul li a {
+    color: #45a8ee;
+    font-weight: normal
+}
+
+#nav-menu a:hover {
+    color: #000
+}
+
+#nav-menu ul a.selected {
+    color: #000
+}
+
+#nav-menu ul.logout_holder li.first-li:hover ul {
+    z-index: 100
+}
+
+.logout_holder {
+    float: right !important;
+    padding: 0 !important
+}
+
+.logout_holder li {
+    border-right: 1px solid #c7c7c7;
+    margin: 0 !important;
+    padding: 0 10px !important
+}
+
+.logout_holder li:last-child {
+    border: medium none !important;
+    padding-right: 0 !important;
+    margin-right: 0 !important
+}
+
+.logout_holder #company-list {
+    width: 145px;
+    padding: 5px 0 10px 10px
+}
+
+.logout_holder #company-list li {
+    position: relative;
+    border: 0;
+    width: 80%;
+    display: inline-block;
+    margin-right: 0
+}
+
+/*End of Navigation*/

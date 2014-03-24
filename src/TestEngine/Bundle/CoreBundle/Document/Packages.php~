@@ -1,0 +1,38 @@
+<?php
+
+namespace TestEngine\Bundle\CoreBundle\Document;
+
+use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
+
+/**
+ * @MongoDB\Document
+ */
+class Packages
+{
+    /**
+     * @MongoDB\Id
+     */
+    protected $id;
+
+    /**
+     * @MongoDB\String
+     */
+    protected $title;
+
+    /**
+     * @MongoDB\String
+     */
+    protected $roles;
+
+    /**
+     * @MongoDB\Int
+     */
+    protected $limitCompanyCount;
+
+    /**
+     * @MongoDB\Int
+     */
+    protected $limitUserCount;
+
+}
+

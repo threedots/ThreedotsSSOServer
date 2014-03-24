@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Single Sign-On demo ({{ broker }}) - Login</title>
+</head>
+<body>
+<h1>Single Sign-On demo - Login</h1>
+<h2>{{ broker }}</h2>
+
+
+<form method="POST" action="/ssoLogin">
+    <table>
+        <tr><td>Username</td><td><input type="text" name="username" /></td></tr>
+        <tr><td>Password</td><td><input type="password" name="password" /></td></tr>
+        <tr><td></td><td><input type="submit" value="Login" /></td></tr>
+    </table>
+</form>
+</body>
+</html>

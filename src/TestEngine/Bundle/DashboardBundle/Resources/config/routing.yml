@@ -1,0 +1,12 @@
+#test_engine_dashboard_homepage:
+#    pattern:  /
+#    defaults: { _controller: TestEngineDashboardBundle:Default:index }
+#
+#sso_login:
+#    pattern: /ssoLogin
+#    defaults: { _controller: TestEngineDashboardBundle:Default:ssoLoginCheck }
+#    requirements: { _method: POST }
+#
+#sso_logout:
+#    pattern: /logout
+#    defaults: { _controller: TestEngineDashboardBundle:Default:logout }

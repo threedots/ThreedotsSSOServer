@@ -1,0 +1,56 @@
+parameters:
+     auth_service.class:                      TestEngine\Bundle\CoreBundle\Service\Auth
+
+     accounts_repository.class:               TestEngine\Bundle\CoreBundle\Repository\AccountRepository
+     roles_repository.class:                  TestEngine\Bundle\CoreBundle\Repository\RolesRepository
+     packages_repository.class:               TestEngine\Bundle\CoreBundle\Repository\PackagesRepository
+     companies_repository.class:              TestEngine\Bundle\CoreBundle\Repository\CompaniesRepository
+     companyuserpermissions_repository.class: TestEngine\Bundle\CoreBundle\Repository\CompanyUserPermissionsRepository
+     companyuser_repository.class:            TestEngine\Bundle\CoreBundle\Repository\CompanyUsersRepository
+
+services:
+     auth_service:
+          class: %auth_service.class%
+          arguments: [@service_container]
+
+     account_repository:
+          class : %accounts_repository.class%
+          factory_service: doctrine_mongodb.odm.document_manager
+          factory_method:  getRepository
+          arguments:
+            - 'TestEngineCoreBundle:Account'
+
+     roles_repository:
+          class : %roles_repository.class%
+          factory_service: doctrine_mongodb.odm.document_manager
+          factory_method:  getRepository
+          arguments:
+            - 'TestEngineCoreBundle:Roles'
+
+     packages_repository:
+          class : %packages_repository.class%
+          factory_service: doctrine_mongodb.odm.document_manager
+          factory_method:  getRepository
+          arguments:
+            - 'TestEngineCoreBundle:Packages'
+
+     companies_repository:
+          class : %companies_repository.class%
+          factory_service: doctrine_mongodb.odm.document_manager
+          factory_method:  getRepository
+          arguments:
+            - 'TestEngineCoreBundle:Companies'
+
+     companyuserpermissions_repository:
+          class : %companyuserpermissions_repository.class%
+          factory_service: doctrine_mongodb.odm.document_manager
+          factory_method:  getRepository
+          arguments:
+            - 'TestEngineCoreBundle:CompanyUserPermissions'
+
+     companyuser_repository:
+          class : %companyuser_repository.class%
+          factory_service: doctrine_mongodb.odm.document_manager
+          factory_method:  getRepository
+          arguments:
+            - 'TestEngineCoreBundle:CompanyUsers'

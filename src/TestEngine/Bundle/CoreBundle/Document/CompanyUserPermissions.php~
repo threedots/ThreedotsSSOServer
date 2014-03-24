@@ -1,0 +1,32 @@
+<?php
+
+namespace TestEngine\Bundle\CoreBundle\Document;
+
+use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
+
+/**
+ * @MongoDB\Document
+ */
+class CompanyUserPermissions
+{
+    /**
+     * @MongoDB\Id
+     */
+    protected $id;
+
+    /**
+     * @MongoDB\String
+     */
+    protected $companyId;
+
+    /**
+     * @MongoDB\String
+     */
+    protected $userId;
+
+    /**
+     * @MongoDB\String
+     */
+    protected $roles;
+
+}
