@@ -29,9 +29,9 @@ class Ssolinks
     /**
      * @var string
      *
-     * @ORM\Column(name="links", type="string", length=100, nullable=false)
+     * @ORM\Column(name="link", type="string", length=100, nullable=false)
      */
-    private $links;
+    private $link;
 
     /**
      * @param string $code
@@ -66,19 +66,19 @@ class Ssolinks
     }
 
     /**
-     * @param string $links
+     * @param string $link
      */
-    public function setLinks($links)
+    public function setLink($link)
     {
-        $this->links = $links;
+        $this->link = $link;
     }
 
     /**
      * @return string
      */
-    public function getLinks()
+    public function getLink()
     {
-        return $this->links;
+        return $this->link;
     }
 
 

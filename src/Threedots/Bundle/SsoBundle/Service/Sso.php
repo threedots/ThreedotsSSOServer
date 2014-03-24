@@ -132,8 +132,9 @@ class Sso extends Base
 
         $this->started = true;
         $sessionName   = $this->session->getName();
+        $cookieSession = $this->cookies->get($sessionName);
 
-        if (preg_match('/^SSO-(\w*+)-(\w*+)-([a-z0-9]*+)$/', $this->cookies->get($sessionName), $matches)) {
+        if (!empty($cookieSession) && preg_match('/^SSO-(\w*+)-(\w*+)-([a-z0-9]*+)$/', $this->cookies->get($sessionName), $matches)) {
 
             $sessionId    = $this->cookies->get($sessionName);
             $result = $this->get('ssolinks_repository')->getBySSOCode($sessionId);
@@ -201,7 +202,7 @@ class Sso extends Base
         return md5('attach' . $token . $ip . $this->brokers[$broker]['secret']);
     }
 
-    protected function getUserInfoFromSession()
+    public function getUserInfoFromSession()
     {
         $this->sessionStart();
         $user = $this->session->get('user');

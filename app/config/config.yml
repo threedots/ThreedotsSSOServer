@@ -19,11 +19,11 @@ framework:
     trusted_hosts:   ~
     trusted_proxies: ~
     session:
-        # handler_id set to null will use default session handler from php.ini
         cookie_lifetime: 10000
         save_path: ~
         cookie_domain:  ".%domain_name%"
-        #name: testenginesession
+        handler_id: session.handler.native_file   #save the session to app/sessions folder
+        save_path: "%kernel.root_dir%/sessions"
     fragments:       ~
     http_method_override: true
 
@@ -69,7 +69,7 @@ doctrine:
 #        default:
 #            server: mongodb://localhost:27017
 #            options: {}
-#    default_database: test_engine
+#    default_database: test_database
 #    document_managers:
 #        default:
 #            auto_mapping: true
@@ -81,15 +81,3 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
-
-##Be Simple SSO Auth
-#be_simple_sso_auth:
-#    admin_sso:
-#        protocol:
-#            id: cas
-#            version: 2
-#        server:
-#            id: cas
-#            login_url: http://www.testengine.local/login
-#            logout_url: http://www.testengine.local/logout
-#            validation_url: http://www.testengine.local/serviceValidate

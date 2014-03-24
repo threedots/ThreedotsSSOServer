@@ -28,9 +28,8 @@ class ServerController extends Controller
 
     public function indexAction(Request $request)
     {
-        $result = $this->get('users_repository')->getUserInfoByEmailAndPassword('masudiiuc@gmail.com', '123456');
-        var_dump($result); die;
         $param = $request->query->get('cmd');
+
         $response = $this->get('sso_model')->processRequest($param);
 
         return $this->processResponse(200, array(

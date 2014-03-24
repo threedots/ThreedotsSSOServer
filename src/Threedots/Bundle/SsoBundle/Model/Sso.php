@@ -23,14 +23,14 @@ class Sso extends Base
      */
     public function processRequest($request)
     {
-        $ssoServer = $this->get('sso_server');
+        $ssoService = $this->get('sso_service');
 
         switch($request) {
 
-            case 'info'     : $response = $ssoServer->getUserInformation();  break;
-            case 'login'    : $response = $ssoServer->login();               break;
-            case 'attach'   : $response = $ssoServer->attach();              break;
-            case 'logout'   : $response = $ssoServer->logout();              break;
+            case 'info'     : $response = $ssoService->getUserInfoFromSession();  break;
+            case 'login'    : $response = $ssoService->login();                   break;
+            case 'attach'   : $response = $ssoService->attach();                  break;
+            case 'logout'   : $response = $ssoService->logout();                  break;
             default         : $response = false;
         }
 

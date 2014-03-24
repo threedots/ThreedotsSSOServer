@@ -1,0 +1,3 @@
+sso_homepage:
+    pattern:  /serviceAuth
+    defaults: { _controller: TestEngineSsoBundle:Default:index }

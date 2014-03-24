@@ -1,0 +1,15 @@
+parameters:
+  sso_server.class: TestEngine\Bundle\SsoBundle\Service\SSOServer
+  users_repository.class:     TestEngine\Bundle\SsoBundle\Entity\UsersRepository
+
+services:
+  sso_server:
+    class: %sso_server.class%
+    arguments: [@service_container]
+
+  Users_repository:
+          class: %users_repository.class%
+          factory_service: doctrine
+          factory_method: getRepository
+          arguments:
+              - 'TestEngineSsoBundle:Users'
