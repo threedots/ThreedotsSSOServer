@@ -7,6 +7,7 @@
 /app/logs/.gitkeep
 /build/
 /vendor/
+/old_vendor/
 /bin/
 /composer.phar
 /.idea

@@ -26,7 +26,7 @@ class UsersRepository extends EntityRepository
 
         $dql = "SELECT users FROM TestEngineSsoBundle:Users as users
                             WHERE users.login = '$email'
-                              AND users.passwd ='$password'";
+                              AND users.password ='$password'";
 
         $result = $this->getEntityManager()
                        ->createQuery($dql)

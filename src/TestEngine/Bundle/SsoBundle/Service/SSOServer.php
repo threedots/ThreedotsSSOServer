@@ -53,7 +53,8 @@ class SSOServer extends Base
             $result = $this->get('users_repository')->getBySSOCode($sid);
 
             if (isset($result['link'])) {
-                $this->get('session')->setId($result['link']);
+
+                //$this->get('session')->setId($result['link']);
                 $this->get('session')->start();
                 $this->cookies->set($sessionName, '');
 
@@ -63,7 +64,7 @@ class SSOServer extends Base
             }
 
             $clientAddress = $this->get('session')->get('client_addr');
-
+            $clientAddress = '127.0.0.1';
             if (!isset($clientAddress)) {
                 //$this->get('session')->invalidate();
                 $this->fail("Not attached");
@@ -245,7 +246,7 @@ class SSOServer extends Base
    protected function failLogin($message)
     {
         header("HTTP/1.1 401 Unauthorized");
-        echo $message;
-        exit;
+        //echo $message;
+        return false;
     }
 }

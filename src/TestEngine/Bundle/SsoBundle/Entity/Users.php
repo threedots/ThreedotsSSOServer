@@ -29,16 +29,16 @@ class Users
     /**
      * @var string
      *
-     * @ORM\Column(name="passwd", type="string", length=100, nullable=false)
+     * @ORM\Column(name="password", type="string", length=100, nullable=false)
      */
-    private $passwd;
+    private $password;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=61, nullable=false)
+     * @ORM\Column(name="firstname", type="string", length=61, nullable=false)
      */
-    private $name = 'not set';
+    private $firstname = 'not set';
 
     /**
      * @var string
@@ -48,215 +48,11 @@ class Users
     private $lastname;
 
     /**
-     * @var boolean
-     *
-     * @ORM\Column(name="avatar", type="boolean", nullable=false)
-     */
-    private $avatar = '0';
-
-    /**
      * @var string
      *
      * @ORM\Column(name="type", type="string", nullable=false)
      */
     private $type = 'user';
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="getreports", type="string", nullable=false)
-     */
-    private $getreports = 'yes';
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="priority_reminder", type="string", nullable=false)
-     */
-    private $priorityReminder = 'yes';
-
-    /**
-     * @var boolean
-     *
-     * @ORM\Column(name="active", type="boolean", nullable=false)
-     */
-    private $active = '1';
-
-    /**
-     * @var boolean
-     *
-     * @ORM\Column(name="sso_logged", type="boolean", nullable=false)
-     */
-    private $ssoLogged = '0';
-
-    /**
-     * @var boolean
-     *
-     * @ORM\Column(name="deleted", type="boolean", nullable=false)
-     */
-    private $deleted = '0';
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="company_id", type="integer", nullable=false)
-     */
-    private $companyId;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="current_version", type="string", length=100, nullable=false)
-     */
-    private $currentVersion;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="os_version", type="string", length=255, nullable=false)
-     */
-    private $osVersion;
-
-    /**
-     * @var boolean
-     *
-     * @ORM\Column(name="is_working", type="boolean", nullable=false)
-     */
-    private $isWorking = '0';
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="update_time", type="datetime", nullable=false)
-     */
-    private $updateTime;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="google_api_access_token", type="string", length=255, nullable=true)
-     */
-    private $googleApiAccessToken = '';
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="google_api_tasks", type="text", nullable=true)
-     */
-    private $googleApiTasks;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="gdata_api_access_token", type="string", length=255, nullable=true)
-     */
-    private $gdataApiAccessToken;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="gcalendar_session_token", type="string", length=150, nullable=true)
-     */
-    private $gcalendarSessionToken;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="basecamp_token", type="string", length=255, nullable=true)
-     */
-    private $basecampToken;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="basecamp_new_access_token", type="string", length=500, nullable=true)
-     */
-    private $basecampNewAccessToken;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="basecamp_new_refresh_token", type="string", length=500, nullable=true)
-     */
-    private $basecampNewRefreshToken;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="basecamp_integration_date", type="datetime", nullable=false)
-     */
-    private $basecampIntegrationDate = '0000-00-00 00:00:00';
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="jira_username", type="string", length=255, nullable=true)
-     */
-    private $jiraUsername;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="jira_password", type="string", length=255, nullable=true)
-     */
-    private $jiraPassword;
-
-    /**
-     * @var boolean
-     *
-     * @ORM\Column(name="default_tasks", type="boolean", nullable=false)
-     */
-    private $defaultTasks = '0';
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="desktop_last_login", type="datetime", nullable=false)
-     */
-    private $desktopLastLogin = '0000-00-00 00:00:00';
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="web_first_login", type="datetime", nullable=false)
-     */
-    private $webFirstLogin = '0000-00-00 00:00:00';
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="web_last_login", type="datetime", nullable=false)
-     */
-    private $webLastLogin = '0000-00-00 00:00:00';
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="user_ip", type="string", length=100, nullable=false)
-     */
-    private $userIp;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="parent_id", type="integer", nullable=false)
-     */
-    private $parentId = '0';
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="trial_hours", type="decimal", precision=5, scale=2, nullable=false)
-     */
-    private $trialHours = '0.00';
-
-    /**
-     * @var boolean
-     *
-     * @ORM\Column(name="v3", type="boolean", nullable=false)
-     */
-    private $v3 = '0';
-
 
 
     /**
@@ -311,9 +107,9 @@ class Users
      * @param string $passwd
      * @return Users
      */
-    public function setPasswd($passwd)
+    public function setPassword($passwd)
     {
-        $this->passwd = $passwd;
+        $this->password = $passwd;
 
         return $this;
     }
@@ -323,9 +119,9 @@ class Users
      *
      * @return string 
      */
-    public function getPasswd()
+    public function getPassword()
     {
-        return $this->passwd;
+        return $this->password;
     }
 
     /**
@@ -334,9 +130,9 @@ class Users
      * @param string $name
      * @return Users
      */
-    public function setName($name)
+    public function setFirstName($name)
     {
-        $this->name = $name;
+        $this->firstname = $name;
 
         return $this;
     }
@@ -346,9 +142,9 @@ class Users
      *
      * @return string 
      */
-    public function getName()
+    public function getFirstName()
     {
-        return $this->name;
+        return $this->firstname;
     }
 
     /**

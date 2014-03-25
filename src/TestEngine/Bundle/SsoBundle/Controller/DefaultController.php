@@ -11,6 +11,7 @@ class DefaultController extends Controller
 
     public function indexAction()
     {
+
         $request = $this->getRequest()->query->get('cmd');
 
         if ($request == 'info') {
@@ -19,6 +20,7 @@ class DefaultController extends Controller
 
         if ($request == 'login'){
             $response = $this->get('sso_server')->login();
+
         }
 
         if ($request == 'attach') {

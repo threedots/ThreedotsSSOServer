@@ -22,7 +22,6 @@ framework:
         cookie_lifetime: 10000
         save_path: ~
         cookie_domain:  ".%domain_name%"
-        handler_id: session.handler.native_file   #save the session to app/sessions folder
         save_path: "%kernel.root_dir%/sessions"
     fragments:       ~
     http_method_override: true
